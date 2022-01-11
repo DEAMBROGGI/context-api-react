@@ -1,24 +1,22 @@
-import logo from './logo.svg';
+
 import './App.css';
+import Results from './components/Results'
+import Inputs from './components/Inputs'
+import {useStateValue} from './core/StateProvider'; //IMPORTO useSateValue para acceder a los state de las props 
+
 
 function App() {
+  const [{textInput},dispatch] = useStateValue(); //llamo las props que voy a utilizar en este caso textInput acompañado de dispatch
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Inputs />
+      <Results />
+      <div className='inputs'>
+            <h4>Texto ingresado visto en App</h4>
+
+            <h3>{textInput}</h3>
+        </div>
+    </>
   );
 }
 
