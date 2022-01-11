@@ -22,7 +22,7 @@ useEffect(() => {
   })
 })
 console.log(search)
-}, [search]);//agrego como modificador a search, es decir cada vez que search sufra un cambio se volvera a ejecutar
+}, [search, dispatch]);//agrego como modificador a search, es decir cada vez que search sufra un cambio se volvera a ejecutar
 
 //UTILIZO LAS PROPS ALOJADAS EN MI REDUCER PARA SER RENDERIZADAS EN ESTE COMPONENTE
 return(

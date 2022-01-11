@@ -6,7 +6,7 @@ import {useStateValue} from './core/StateProvider'; //IMPORTO useSateValue para 
 
 
 function App() {
-  const [{textInput},dispatch] = useStateValue(); //llamo las props que voy a utilizar en este caso textInput acompañado de dispatch
+  const [{textInput}] = useStateValue(); //llamo las props que voy a utilizar en este caso textInput acompañado de dispatch
   return (
     <>
       <Inputs />
